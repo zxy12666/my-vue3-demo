@@ -1,16 +1,8 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
+// store.js
+import { SuperVuex } from 'super-vuex'
+import UserStore from './store/user'
 
-Vue.use(Vuex)
+const Main = new SuperVuex()
+Main.setModule(UserStore)
 
-export default new Vuex.Store({
-  state: {
-
-  },
-  mutations: {
-
-  },
-  actions: {
-
-  }
-})
+export default Main.init()
